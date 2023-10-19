@@ -1,0 +1,10 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+beautifulsoup4 = "~=4.12"
+click = ">=8.0"
+click-pathlib = "~=2020.3"
+rich = "~=13.6"
