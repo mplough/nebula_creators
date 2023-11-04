@@ -66,10 +66,7 @@ def click_main(creators_filename):
     podcast_creator_trees = soup.select("div.grid-item.podcast-creator")
     podcast_creators = [make_creator(c) for c in podcast_creator_trees]
 
-    console.print(f"There are currently {len(video_creators)} video creators on Nebula.")
-    console.print()
-
-    console.print(f"There are currently {len(podcast_creators)} podcast creators on Nebula:")
+    console.print(f"There are currently {len(video_creators)} video creators and {len(podcast_creators)} podcast creators on Nebula.")
     console.print()
 
     console.print(f"[bold red]Video creators")
