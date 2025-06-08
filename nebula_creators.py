@@ -1,7 +1,16 @@
+# /// script
+# requires-python = ">=3.13"
+# dependencies = [
+#   "beautifulsoup4~=4.12",
+#   "click>=8.0",
+#   "rich~=13.6",
+# ]
+# ///
+
 from dataclasses import dataclass
+from pathlib import Path
 
 import click
-import click_pathlib
 from bs4 import BeautifulSoup
 from rich.console import Console
 from rich.markup import escape
@@ -54,7 +63,7 @@ def title_sort_key(s: str) -> str:
 @click.option(
     "--creators-filename",
     default="creators.html",
-    type=click_pathlib.Path(exists=True),
+    type=click.Path(exists=True, file_okay=True, dir_okay=False, path_type=Path),
 )
 def click_main(creators_filename):
     with creators_filename.open() as f:

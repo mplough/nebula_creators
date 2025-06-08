@@ -11,8 +11,9 @@ want to check out.
 
 ## Setup
 
-1. `pipenv install`
-1. `pipenv shell`
+This tool is written as a script that can be [run with uv](https://docs.astral.sh/uv/guides/scripts/).
+
+1. Install `uv`
 
 # Use
 
@@ -20,5 +21,5 @@ Download Nebula's creators page, then run the script.
 
 ```bash
 curl https://talent.nebula.tv/creators/ >creators.html
-python nebula_creators.py
+uv run nebula_creators.py
 ```
